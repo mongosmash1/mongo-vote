@@ -4,8 +4,8 @@
 
 	<head>
 		<title>Mongo Vote! - Simple voting app built with node, mongodb, and express.</title>
-
-    <!-- Bootstrap -->
+		
+		<!-- Bootstrap -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     
     <!-- Custom CSS -->
@@ -13,9 +13,11 @@
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700|Permanent+Marker" rel="stylesheet">
     
 	</head>
-
-	<header>
+  
+  <header>
 		<p>Welcome, <span id="display-name"></span>!</p>
+    <a class="menu" href="/">Home</a>
+    <p>|</p>
 		<a class="menu" href="/profile">Profile</a>
 		<p>|</p>
     <a class="menu" href="/dashboard">Dashboard</a>
@@ -31,16 +33,10 @@
 		</div>
 	
 		<div class="container">
-			<p>You have clicked the button <span id="click-nbr"></span> times.</p>
-			<br />
-			<div class="btn-container">
-				<button type="submit" class="btn btn-add">CLICK ME!</button>
-				<button class="btn btn-delete">RESET</button>
-			</div>
+			<p>Are you sure you want to delete this poll?</p>
 		</div>
-		
+    
 		<script type="text/javascript" src="common/ajax-functions.js"></script>
-		<script type="text/javascript" src="controllers/clickController.client.js"></script>
 		<script type="text/javascript" src="controllers/userController.client.js"></script>
 	</body>
 

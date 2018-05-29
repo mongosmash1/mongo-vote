@@ -36,6 +36,34 @@ module.exports = function (app, passport) {
 			res.sendFile(path + '/public/profile.html');
 		});
 
+  app.route('/dashboard')
+		.get(isLoggedIn, function (req, res) {
+			res.sendFile(path + '/public/dashboard.html');
+		});
+  
+  app.route('/polls/new')
+		.get(isLoggedIn, function (req, res) {
+			res.sendFile(path + '/public/poll-new.html');
+		});
+  
+  app.route('/polls/delete/:id')
+		.get(isLoggedIn, function (req, res) {
+      let pollID = req.params.id;
+			res.sendFile(path + '/public/poll-delete.html');
+		});
+  
+  app.route('/polls/vote/:id')
+		.get(isLoggedIn, function (req, res) {
+      let pollID = req.params.id;
+			res.sendFile(path + '/public/poll-vote.html');
+		});
+  
+  app.route('/polls/view/:id')
+		.get(isLoggedIn, function (req, res) {
+      let pollID = req.params.id;
+			res.sendFile(path + '/public/poll-detail.html');
+		});
+  
 	app.route('/api/:id')
 		.get(isLoggedIn, function (req, res) {
 			res.json(req.user.github);
